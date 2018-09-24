@@ -1,0 +1,17 @@
+- add breadcrumbs to the pages
+- create template-driven form
+- create reactive form --> OK
+- create dynamic form
+- improve styles
+- implement unit tests
+- implement REST api calls --> OK
+- add REST api calls error handling
+- implement security (authentication and authorization)
+- implement routing --> OK
+- improve menu
+- improve footer
+- add data that would profit from the use of pipes (predefined and customized)
+- find a way to use dynamic css class
+- add pagination to the list
+- add filters to the list
+- add messages when deleting or updating or adding

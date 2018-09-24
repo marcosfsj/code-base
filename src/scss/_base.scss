@@ -1,0 +1,8 @@
+/* What an element should look like anywhere in the page. */
+/* So the reset should put the element back to what has been defined here. */
+/* Here we do not create classes, we only style html elements (body, a, p, h1). */
+@import './vars';
+
+body {
+   font: 100% $font-stack;
+}

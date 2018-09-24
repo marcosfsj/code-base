@@ -1,0 +1,7 @@
+/* Here goes styles that are applicable on the diferent sessions of your page. */
+/* So, le us say, your header is divided by three sessions, the navbar, a search element and the companie's logo. */
+/* So within this file goes the styles specific for those three sessions. Here can create classes. */
+@import './modules/card_details';
+@import './modules/nav';
+@import './modules/search_criteria';
+@import './modules/table';

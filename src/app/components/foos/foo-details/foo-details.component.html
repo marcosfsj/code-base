@@ -1,0 +1,71 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <form [formGroup]="fooForm">
+      <div class="form-row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <div hidden>
+                  <input formControlName="id" type="text" id="id"/>
+                </div>
+                <div class="form-group">
+                  <label for="fpa">Foo Param A</label>
+                  <input formControlName="fpa" type="text" class="form-control" id="fpa" placeholder="Foo Param A"/>
+                  <div *ngIf="fpa.invalid && (fpa.dirty || fpa.touched)" class="alert alert-danger">
+                    <div *ngIf="fpa.errors.required">
+                      Fpa is required.
+                    </div>
+                    <div *ngIf="fpa.errors.minlength">
+                      Fpa must be at least 4 characters long.
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="fpb">Foo Param B</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                    </div>
+                    <input formControlName="fpb" type="text" class="form-control" id="fpb" placeholder="Foo Param B"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="form-group">
+                  <div class="form-check">
+                    <input formControlName="fpc" type="checkbox" class="form-check-input" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                      Foo Param C
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="fpd">Foo Param D</label>
+                  <select formControlName="fpd" class="custom-select form-control" id="fpd">
+                    <option selected>Choose an option</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-sm-2" *ngIf="id">
+            <button type="button" class="btn btn-primary" (click)="update()" [disabled]="fooForm.invalid || !fooForm.dirty">Save</button>
+          </div>
+          <div class="col-sm-2" *ngIf="!id">
+            <button type="button" class="btn btn-primary" (click)="add()" [disabled]="fooForm.invalid  || !fooForm.dirty">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

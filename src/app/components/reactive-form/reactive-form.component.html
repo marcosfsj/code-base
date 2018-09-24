@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" class="form-control" formControlName="firstName" id="firstName" placeholder="First Name">
+          <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="alert alert-danger">
+            <div *ngIf="firstName.errors.required">
+              First Name is required.
+            </div>
+            <div *ngIf="firstName.errors.minlength">
+              First Name must be at least 4 characters long.
+            </div>
+            <div *ngIf="firstName.errors.forbiddenName">
+              First Name cannot contain Bob.
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" class="form-control" formControlName="lastName" id="lastName" placeholder="Last Name">
+        </div>
+        <div formGroupName="address">
+          <div class="form-group">
+            <label for="lineOne">Line 1</label>
+            <input type="text" class="form-control" formControlName="lineOne" id="lineOne" placeholder="Line 1">
+          </div>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" formControlName="city" id="city" placeholder="City">
+          </div>
+          <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" class="form-control" formControlName="state" id="state" placeholder="State">
+          </div>
+          <div class="form-group">
+            <label for="postalCode">Postal Code</label>
+            <input type="text" class="form-control" formControlName="postalCode" id="postalCode" placeholder="Postal Code">
+          </div>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-primary" [disabled]="reactiveForm.invalid">Submit</button>
+        </div>
+        <div>
+          <button type="button" class="btn btn-primary" (click)="updateReactiveForm()">Update Reactive Form Programaticaly</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <form [formGroup]="reactiveFormUsingFormBuilder" (ngSubmit)="onSubmitUsingFormBuilder()">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" class="form-control" formControlName="firstName" id="firstName" placeholder="First Name">
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" class="form-control" formControlName="lastName" id="lastName" placeholder="Last Name">
+        </div>
+        <div formGroupName="address">
+          <div class="form-group">
+            <label for="lineOne">Line 1</label>
+            <input type="text" class="form-control" formControlName="lineOne" id="lineOne" placeholder="Line 1">
+          </div>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" class="form-control" formControlName="city" id="city" placeholder="City">
+          </div>
+          <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" class="form-control" formControlName="state" id="state" placeholder="State">
+          </div>
+          <div class="form-group">
+            <label for="postalCode">Postal Code</label>
+            <input type="text" class="form-control" formControlName="postalCode" id="postalCode" placeholder="Postal Code">
+          </div>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-primary" [disabled]="reactiveFormUsingFormBuilder.invalid">Submit</button>
+        </div>
+        <div>
+          <button type="button" class="btn btn-primary" (click)="updateReactiveFormUsingFormBuilder()">Update Reactive Form Programaticaly</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
