@@ -27,7 +27,7 @@ export class FoosComponent implements OnInit, OnDestroy {
 
   onDelete(id: number): void {
     this.fooDeleteSubscription = this.fooService.delete(id).subscribe(
-      foo => this.foos = this.foos.filter(f => f.id !== id)
+      () => this.foos = this.foos.filter(f => f.id !== id)
     );
   }
 
