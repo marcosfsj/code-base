@@ -2,15 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 import { Observable } from 'rxjs';
 
-import { SignupService } from './signup.service';
-import { Signup } from './signup.model';
+import { SignupService } from '../signup.service';
+import { Signup } from '../signup.model';
 
 @Component({
-  selector: 'app-signup',
-  templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.scss']
+  selector: 'app-signup-edit',
+  templateUrl: './signup-edit.component.html',
+  styleUrls: ['./signup-edit.component.scss']
 })
-export class SignupComponent implements OnInit {
+export class SignupEditComponent implements OnInit {
 
   genders: string[] = ['Male', 'Female'];
   form: FormGroup;

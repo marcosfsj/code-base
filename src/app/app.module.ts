@@ -17,7 +17,9 @@ import { HomeComponent,
          FooDetailsComponent,
          TemplateDrivenFormComponent,
          ReactiveFormComponent,
-        SignupComponent } from './components';
+         SignupsComponent,
+         SignupComponent,
+         SignupEditComponent } from './components';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -32,7 +34,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     TemplateDrivenFormComponent,
     ReactiveFormComponent,
     HeaderComponent,
+    SignupsComponent,
     SignupComponent,
+    SignupEditComponent
   ],
   imports: [
     BrowserModule,

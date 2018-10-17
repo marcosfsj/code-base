@@ -7,7 +7,8 @@ import {
   FooDetailsComponent,
   TemplateDrivenFormComponent,
   ReactiveFormComponent,
-  SignupComponent
+  SignupsComponent,
+  SignupEditComponent
 } from '.';
 
 const routes: Routes = [
@@ -18,7 +19,9 @@ const routes: Routes = [
   { path: 'foo-details', component: FooDetailsComponent },
   { path: 'template-driven-form', component: TemplateDrivenFormComponent },
   { path: 'reactive-form', component: ReactiveFormComponent },
-  { path: 'signup', component: SignupComponent }
+  { path: 'signups', component: SignupsComponent},
+  { path: 'signups/:id/edit', component: SignupEditComponent},
+  { path: 'signups/new', component: SignupEditComponent}
 ];
 
 @NgModule({

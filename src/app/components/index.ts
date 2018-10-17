@@ -6,4 +6,6 @@ export * from './foos/foos.component';
 export * from './foos/foo-details/foo-details.component';
 export * from './reactive-form/reactive-form.component';
 export * from './template-driven-form/template-driven-form.component';
-export * from './signup/signup.component';
+export * from './signups/signups.component';
+export * from './signups/signup/signup.component';
+export * from './signups/signup-edit/signup-edit.component';
