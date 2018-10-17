@@ -9,3 +9,4 @@ export * from './template-driven-form/template-driven-form.component';
 export * from './signups/signups.component';
 export * from './signups/signup/signup.component';
 export * from './signups/signup-edit/signup-edit.component';
+export * from './miscellaneous/miscellaneous.component';

@@ -1,14 +1,20 @@
+// Angular dependencies
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
-// In Memory Module is only for tests
+// Third part dependencies
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// For dev only
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
 
+// Reouting
+import { AppRoutingModule } from './app-routing.module';
+
+// Components
 import { HomeComponent,
          HeaderComponent,
          NavbarComponent,
@@ -19,9 +25,11 @@ import { HomeComponent,
          ReactiveFormComponent,
          SignupsComponent,
          SignupComponent,
-         SignupEditComponent } from './components';
+         SignupEditComponent,
+         MiscellaneousComponent } from './components';
 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// Pipes
+import { ShortenPipe } from './pipes/shorten.pipe';
 
 @NgModule({
   declarations: [
@@ -36,7 +44,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HeaderComponent,
     SignupsComponent,
     SignupComponent,
-    SignupEditComponent
+    SignupEditComponent,
+    MiscellaneousComponent,
+    ShortenPipe
   ],
   imports: [
     BrowserModule,

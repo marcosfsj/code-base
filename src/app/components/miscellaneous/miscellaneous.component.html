@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div>
+      <p>Pipes</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="group-list">
+      <div class="group-list-item" *ngFor="let longString of longStrings">{{ longString | shorten:10 }}</div>
+    </div>
+  </div>
+</div>
