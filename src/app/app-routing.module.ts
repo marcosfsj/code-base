@@ -1,3 +1,4 @@
+import { MiscellaneousComponent } from './components/miscellaneous/miscellaneous.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
   { path: 'foos', component: FoosComponent },
+  { path: 'miscellaneous', component: MiscellaneousComponent },
   { path: 'foo-details/:id', component: FooDetailsComponent },
   { path: 'foo-details', component: FooDetailsComponent },
   { path: 'template-driven-form', component: TemplateDrivenFormComponent },
