@@ -15,11 +15,11 @@ import { HomeComponent,
          FooterComponent,
          FoosComponent,
          FooDetailsComponent,
-         BarsComponent,
-         BarDetailsComponent,
          TemplateDrivenFormComponent,
          ReactiveFormComponent,
-         DynamicFormComponent } from './components';
+        SignupComponent } from './components';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -29,12 +29,10 @@ import { HomeComponent,
     FooterComponent,
     FoosComponent,
     FooDetailsComponent,
-    BarsComponent,
-    BarDetailsComponent,
     TemplateDrivenFormComponent,
     ReactiveFormComponent,
-    DynamicFormComponent,
     HeaderComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +42,8 @@ import { HomeComponent,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

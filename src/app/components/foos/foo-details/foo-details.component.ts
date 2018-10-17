@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Foo } from '../../../model';
-import { FormGroup } from '@angular/forms';
 import { FooService } from 'src/app/services';
 
 @Component({
@@ -36,7 +35,7 @@ export class FooDetailsComponent implements OnInit {
 
   ngOnInit() {
     this.id = +this.route.snapshot.paramMap.get('id');
-    if(this.id) {
+    if (this.id) {
       this.findById(this.id);
     }
   }
@@ -81,13 +80,13 @@ export class FooDetailsComponent implements OnInit {
           fpc: foo.fpc,
           fpd: foo.fpd
         });
-        this.foo = foo
+        this.foo = foo;
       }
     );
   }
 
   nextId() {
-    return Math.floor((Math.random()*100)+1);
+    return Math.floor((Math.random() * 100) + 1);
   }
 
   goBack(): void {
