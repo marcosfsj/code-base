@@ -33,7 +33,7 @@ export class FoosComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.fooListSubscription.unsubscribe();
-    if(this.fooDeleteSubscription) { this.fooDeleteSubscription.unsubscribe() };
+    if (this.fooDeleteSubscription) { this.fooDeleteSubscription.unsubscribe(); }
   }
 
 }

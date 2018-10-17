@@ -20,7 +20,11 @@ export class InMemoryDataService implements InMemoryDbService {
       {id: 10, fpa: 'jjjjjjjj', fpb: 'B', fpc: true, fpd: 2}
     ];
 
-    return { foos };
+    const signups = [
+      {userName: 'Marcos', email: 'marcos@gmail.com', gender: 'Male', hobbies: ['Soccer']}
+    ];
+
+    return { foos, signups };
 
   }
 

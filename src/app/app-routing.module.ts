@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent,
-         FoosComponent,
-         FooDetailsComponent,
-         TemplateDrivenFormComponent,
-         ReactiveFormComponent } from '.';
+import {
+  HomeComponent,
+  FoosComponent,
+  FooDetailsComponent,
+  TemplateDrivenFormComponent,
+  ReactiveFormComponent,
+  SignupComponent
+} from '.';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -14,7 +17,8 @@ const routes: Routes = [
   { path: 'foo-details/:id', component: FooDetailsComponent },
   { path: 'foo-details', component: FooDetailsComponent },
   { path: 'template-driven-form', component: TemplateDrivenFormComponent },
-  { path: 'reactive-form', component: ReactiveFormComponent }
+  { path: 'reactive-form', component: ReactiveFormComponent },
+  { path: 'signup', component: SignupComponent }
 ];
 
 @NgModule({
