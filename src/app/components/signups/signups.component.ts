@@ -13,6 +13,7 @@ export class SignupsComponent implements OnInit, OnDestroy {
 
   signups: Signup[];
   signupsSubscription: Subscription;
+  filteredStatus = '';
 
   constructor(
     private signupService: SignupService,

@@ -30,6 +30,7 @@ import { HomeComponent,
 
 // Pipes
 import { ShortenPipe } from './pipes/shorten.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ShortenPipe } from './pipes/shorten.pipe';
     SignupComponent,
     SignupEditComponent,
     MiscellaneousComponent,
-    ShortenPipe
+    ShortenPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

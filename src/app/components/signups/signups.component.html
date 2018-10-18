@@ -1,7 +1,10 @@
 <div class="container">
   <div class="row">
+    <div>
+      <input type="text" [(ngModel)]="filteredStatus">
+    </div>
     <div class="col-md-12">
-      <app-signup  *ngFor="let signup of signups" [signup]="signup"></app-signup>
+      <app-signup  *ngFor="let signup of signups | filter:filteredStatus:'userName'" [signup]="signup"></app-signup>
     </div>
     <hr>
     <button class="btn btn-primary" type="button" (click)="onNew()">New</button>
