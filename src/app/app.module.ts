@@ -15,18 +15,20 @@ import { InMemoryDataService } from './services/in-memory-data.service';
 import { AppRoutingModule } from './app-routing.module';
 
 // Components
-import { HomeComponent,
-         HeaderComponent,
-         NavbarComponent,
-         FooterComponent,
-         FoosComponent,
-         FooDetailsComponent,
-         TemplateDrivenFormComponent,
-         ReactiveFormComponent,
-         SignupsComponent,
-         SignupComponent,
-         SignupEditComponent,
-         MiscellaneousComponent } from './components';
+import {
+  HomeComponent,
+  HeaderComponent,
+  NavbarComponent,
+  FooterComponent,
+  FoosComponent,
+  FooDetailsComponent,
+  TemplateDrivenFormComponent,
+  ReactiveFormComponent,
+  SignupsComponent,
+  SignupComponent,
+  SignupEditComponent,
+  MiscellaneousComponent
+} from './components';
 
 // Pipes
 import { ShortenPipe } from './pipes/shorten.pipe';
@@ -56,12 +58,12 @@ import { FilterPipe } from './pipes/filter.pipe';
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    ),
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
+      dataEncapsulation: false
+    }),
     NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
